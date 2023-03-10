@@ -1,0 +1,13 @@
+//  Arquivo de comando que o bot irá responder
+
+const { SlashCommandBuilder } = require("discord.js")
+
+module.exports ={
+        data: new SlashCommandBuilder()
+            .setName("ping")
+            .setDescription("Responde com pong"),
+
+    async execute(interaction){
+        await interaction.reply("Pong!")
+    }
+}
